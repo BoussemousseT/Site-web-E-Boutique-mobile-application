@@ -1,1 +1,27 @@
-<h1>test</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="5;url=https://www.example.com">
+  <title>Redirection en cours...</title>
+</head>
+<body>
+  <p>Si la redirection ne se fait pas automatiquement, <a href="https://www.example.com">cliquez ici</a>.</p>
+  <script>
+    var countdown = 5; // Définissez le temps du compte à rebours en secondes
+
+    function updateCountdown() {
+      document.getElementById('countdown').innerText = countdown;
+      countdown--;
+
+      if (countdown < 0) {
+        window.location.href = 'https://www.example.com';
+      } else {
+        setTimeout(updateCountdown, 1000);
+      }
+    }
+
+    updateCountdown();
+  </script>
+</body>
+</html>
